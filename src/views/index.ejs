@@ -1,18 +1,19 @@
-
 <%- include('includes/head.ejs') %>
 
-    <section class="container">
-        <h1>
-            <%= Varlocal %> 
-            
-        </h1>
+<%- include('includes/nav.ejs') %>
 
-        <form action="/" method="post">
-            <input type="hidden" name="_csrf" value="<%= csrf %>">
-            <label>Cliente</label>
-            <input type="text" name="cliente">
-            <button>submmit</button>
-        </form>
-    </section>
+<div class="container">
+    <div class="row">
+        <div class="col-lg-2"></div>
 
-<%- include('includes/footer') %>
+        <div class="col-lg-8 my-8">
+            <h1 class="display-1 text-center "> Erro 404!</h1>
+            <p class="text-center lead">A pagina que voce procura não existe</p>
+        
+        </div>
+
+        <div class="col-lg-2"></div>
+    </div>
+</div>
+<%- include('includes/footer.ejs') %>
+    
