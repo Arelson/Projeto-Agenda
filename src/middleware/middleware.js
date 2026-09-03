@@ -1,9 +1,6 @@
 exports.middlewareGlobal = (req, res, next) => {
-  if (req.body?.cliente) {
-    console.log(`Eu te vi: ${req.body.cliente}`);
-  }
-  
-  res.locals.Varlocal = 'esse é o valor da var local';
+  res.locals.error = req.flash('error');
+  res.locals.success = req.flash('success');
   next();
 };
 

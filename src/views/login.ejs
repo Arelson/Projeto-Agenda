@@ -16,15 +16,17 @@
                     <h3 class="">Cadastre-se</h3>
                     <p>Crie sua conta para ter acesso as funções do site</p>
 
+                    <%- include('includes/menssages')%>
+
                     <form action="/login/register" method="POST">
-                    <input type="hidden" name="_csrf" value=<%=csrf%>>
+                    <input type="hidden" name="_csrf" value="<%=csrf%>">
                         <div class="mb-3">
                             <label>Seu e-mail</label>
                             <input type="email" class="form-control" name="email">
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label" name="password">Sua senha</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
+                            <label for="exampleInputPassword1" class="form-label">Sua senha</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" name="password">
                         </div>
                         <button type="submit" class="btn btn-primary">Criar conta</button>
                     </form>
@@ -37,14 +39,14 @@
                     
 
                     <form action="/login/login" method="POST">
-                    <input type="hidden" name="_csrf" value=<%=csrf%>>
+                    <input type="hidden" name="_csrf" value="<%=csrf%>">
                         <div class="mb-3">
                             <label>E-mail</label>
                             <input type="email" class="form-control" name="email">
                         </div>
                         <div class="mb-3">
-                            <label for="exampleInputPassword1" class="form-label" name="password">Senha</label>
-                            <input type="password" class="form-control" id="exampleInputPassword1">
+                            <label for="exampleInputPassword1" class="form-label" >Senha</label>
+                            <input type="password" class="form-control" id="exampleInputPassword1" name="password">
                         </div>
                         <button type="submit" class="btn btn-primary">Login</button>
                     </form>
