@@ -10,11 +10,16 @@
             <h1 class="text-center my-3"> Agenda</h1>
             <p class="text-center lead">Seus contatos</p>
 
-            <div class="row">
-                <div class="col">
-                    <div class="alert alert-danger">ERROR ERROR ERROR</div>
+            <%if (!user) {%>
+                <div class="row">
+                    <div class="col">
+                        <div class="alert alert-info" role="alert">
+                            Precisa esta logado para fazer as alterações
+                        </div>
+                    </div>
                 </div>
-            </div>
+            <%}%>
+           <%- include('includes/menssages')%>
 
             <div class="responsive-table">
                 <table class="table my-3">

@@ -9,15 +9,13 @@
         <div class="col-lg-8 my-3">
             <h1 class="text-center my-3"> Criar conta ou fazer o Login</h1>
             <p class="text-center lead">Faça seu login ou crie sua conta</p>
+            <%- include('includes/menssages')%>
 
             <div class="row">
 
                 <div class="col-lg text-center">
                     <h3 class="">Cadastre-se</h3>
                     <p>Crie sua conta para ter acesso as funções do site</p>
-
-                    <%- include('includes/menssages')%>
-
                     <form action="/login/register" method="POST">
                     <input type="hidden" name="_csrf" value="<%=csrf%>">
                         <div class="mb-3">
