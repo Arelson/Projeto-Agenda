@@ -59,5 +59,15 @@ Contato.buscaporID = async function (id) {
     return cont;
 }
 
+Contato.prototype.edit = async function (id) {
+    if (typeof id !== "string") return;
+    this.valida();
+
+    if (this.error.length > 0) return;
+
+    this.contato = await ContatoModel.findByIdAndUpdate(id, this.body, { new: true});
+    
+}
+
 
 module.exports = Contato;

@@ -14,8 +14,13 @@
 
             <div class="col-lg text-center">
                 <h3 class="">Cadastre-se</h3>
-    
-                <form action="/contato/register" method="POST">
+
+                <% if(cont._id) {%>
+                    <form action="/contato/edit/<%= cont._id%>" method="POST">
+                <%} else {%>
+                    <form action="/contato/register" method="POST">
+                <%}%>
+
                 <input type="hidden" name="_csrf" value="<%=csrf%>">
                     <div class="mb-3">
                         <label>Nome</label>
