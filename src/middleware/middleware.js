@@ -18,3 +18,14 @@ exports.csrfMiddleware = (req, res, next) => {
 
   next();
 }
+
+exports.loginRequired = (req, res, next) => {
+  
+  if (!req.session.user) {
+    req.flash('error', 'Voce precisa fazer login');
+    req.session.save(() => res.redirect('/'));
+    return;
+  }
+
+  next();
+}
